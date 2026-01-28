@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      // let x = 3
+      // let y = x++
+      // console.log(x,y,"checkboth")
+
+      let result = document.getElementById("result");
+      let output = "";
+
+      // for(let i = 100; i > 0; i--){
+      //     output += i + "<br/>"
+      //     console.log(i,"check11")
+      // }
+      // console.log(i,"check18")
+      // result.innerHTML = output
+
+      // let i = 100;
+      // while (i <= 100) {
+      //     console.log(i,"check27")
+      //     output += i + "<br/>"
+      //     i++
+      // }
+      // result.innerHTML = output
+      let i = 100;
+      do {
+        console.log(i, "check28");
+        output += i + "<br/>";
+        i++;
+      } while (i <= 100);
+
+      result.innerHTML = output;
+    </script>
+  </body>
+</html>

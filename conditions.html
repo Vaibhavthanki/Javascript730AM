@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkAge()">Check Age</button>
+    <p id="result"></p>
+    <button onclick="getWeekDay()">Get WeekDay</button>
+    <script>
+
+        function getWeekDay() {
+            const date = new Date();
+            const day = date.getDay();
+            console.log(day,"checkday");
+            let dayName = "";
+            switch(day) {
+                case 0:
+                    dayName = "Sunday";
+                    break;
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                case 6:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    dayName = "Invalid Day";
+            }
+            alert("Today is " + dayName);
+        }
+
+        function checkAge() {
+            const age = document.getElementById('ageInput').value;
+            const result = document.getElementById('result');
+            if (age >= 18) {
+                // result.textContent = "You are an adult.";
+                result.innerHTML = "You are an <strong>adult</strong>.";
+            } else if(age >= 13) {
+                // result.textContent = "You are a teenager.";
+                result.innerHTML = "You are a <em>teenager</em>.";
+            } else if( age >= 3) {
+                // result.textContent = "You are a child.";
+                result.innerHTML = "You are a <em>child</em>.";
+            }
+             else {
+                // result.textContent = "You are a minor.";
+                result.innerHTML = "You are a <em>minor</em>.";
+            }
+        }
+    </script>
+</body>
+</html>

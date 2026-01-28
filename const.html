@@ -1,49 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Redeclaration of variables won't work with const
-        const a = 10;
-       // const a = 20; // This will throw an error because 'const' does not allow redeclaration
+      // Redeclaration of variables won't work with const
+      const a = 10;
+      // const a = 20; // This will throw an error because 'const' does not allow redeclaration
 
-       //    Reassignment of variables won't work with const
-       // a = 30; // This will throw an error because 'const' does not allow reassignment
+      //    Reassignment of variables won't work with const
+      // a = 30; // This will throw an error because 'const' does not allow reassignment
       console.log(a);
 
-        // Block scope
-        // Case 1 :-
-        const b = 50;
-        {
-            // console.log(b, "before redeclaration inside block"); // This will throw an error cannot access 'b' before initialization
-            const b = 60; // This 'b' is a different variable, scoped to this block
-            console.log(b, "inside block"); // Outputs 60
-        }
-        console.log(b, "outside block"); // Outputs 50
+      // Block scope
+      // Case 1 :-
+      const b = 50;
+      {
+        // console.log(b, "before redeclaration inside block"); // This will throw an error cannot access 'b' before initialization
+        const b = 60; // This 'b' is a different variable, scoped to this block
+        console.log(b, "inside block"); // Outputs 60
+      }
+      console.log(b, "outside block"); // Outputs 50
 
-        // Case 2 :-
-        {
-            const c = 70; // This 'c' is scoped to this block
-            console.log(c, "c inside block"); // Outputs 70
-        }
-        // console.log(c); // This will throw an error because 'c' is not defined outside the block
+      // Case 2 :-
+      {
+        const c = 70; // This 'c' is scoped to this block
+        console.log(c, "c inside block"); // Outputs 70
+      }
+      // console.log(c); // This will throw an error because 'c' is not defined outside the block
 
-
-        /*
+      /*
                 Multi-line comment
         */
 
-        // Single line comment
+      // Single line comment
 
-        //  Variable    Reassignment       Redeclaration            scope
-        
-        //     const         No                 No                  Block Scope
-        //       let         Yes                No                  Block Scope
-        //       var         Yes                Yes                 Global Scope
+      //  Variable    Reassignment       Redeclaration            scope
+
+      //     const         No                 No                  Block Scope
+      //       let         Yes                No                  Block Scope
+      //       var         Yes                Yes                 Global Scope
     </script>
-</body>
+  </body>
 </html>
