@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script type="module">
+      import { data } from "./data.js";
+
+      console.log(data, "check13");
+
+      let result = "<p> First Name and Last Name </p>";
+      for (const item of data) {
+        console.log(item, "check17");
+        // result += "<p> firstName :- " + item.name.firstname + " lastName :- " + item.name.lastname + "</p>";
+        result += `<p>firstName :- ${item.name.firstname} lastName :- ${item.name.lastname}</p>`;
+      }
+
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

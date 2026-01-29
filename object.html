@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        name: "Aman",
+        age: 20,
+      };
+
+      //   How to access object properties
+      console.log(obj.name, obj.age);
+      console.log(obj["name"], obj["age"]);
+
+      const person = {};
+
+      person["firstName"] = "John";
+      person["lastName"] = "Doe";
+
+      person.age = 25;
+      person.city = "New York";
+
+      console.log(person);
+
+      const person1 = {
+        firstName: "Jane",
+        lastName: "Smith",
+        age: 30,
+        address: {
+          street: "123 Main St",
+          city: "Los Angeles",
+          country: "USA",
+        },
+      };
+
+      const person2 = {
+        ...person1,
+        firstName: "Emily",
+        middleName: "A.",
+      };
+
+      const person3 = {
+        ...person1,
+        ...person2,
+      };
+
+      console.log(person1.address.street, person1["address"]["city"]);
+      console.log(person3);
+    </script>
+  </body>
+</html>
