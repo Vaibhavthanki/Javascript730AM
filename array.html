@@ -36,12 +36,13 @@
       console.log(newArr, newArr[2]); // Outputs [100, 200, undefined, undefined, undefined, 500]
 
       const cars = new Array("Saab", "Volvo", "BMW");
+      new Array(3); // Creates an array of length 3 with empty slots [undefined,undefined,undefined]
       console.log(cars);
 
       const fruits = ["Banana", "Orange", "Apple", "Mango"];
-      console.log(fruits.toString());
+      console.log(fruits.toString()); // Outputs "Banana,Orange,Apple,Mango"
 
-      const updatedFruits = [...fruits, "Pineapple", "Grapes"];
+      const updatedFruits = ["Pineapple", ...fruits, "Grapes"];
       console.log(updatedFruits);
       const testArray = [NaN];
       console.log(new Array(null), "check44", testArray, new Array(5));

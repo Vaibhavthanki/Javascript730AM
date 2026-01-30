@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      const userData = {
+        id: 1,
+        email: "john@gmail.com",
+        username: "johnd",
+        password: "m38rmF$",
+        name: "John Doe",
+        phone: "1-570-236-7033",
+        city: "kilcoole",
+        country: "Ireland",
+        zipcode: "12926-3874",
+      };
+      console.log(userData.email, "check-email", userData["email"]);
+      let result = "<p> User Details </p>";
+      for (const userDataKey in userData) {
+        console.log(userDataKey, "check-key", userData[userDataKey]);
+        result += `<p>${userDataKey} :- ${userData[userDataKey]}</p>`;
+      }
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>
